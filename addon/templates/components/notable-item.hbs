@@ -1,0 +1,17 @@
+<div class="notable-avatar">
+	{{initials-avatar fullName=note.posterFullName index=index}}
+</div>
+<div class="notable-body">
+	<div class="name">
+		{{note.posterFullName}}
+	</div>
+	<div class="hidden-xs time">
+		{{#if useFontAwesome}}
+			<i class='fa fa-clock-o'></i>
+		{{/if}}
+		{{moment-format note.createdAt}}
+	</div>
+	<div class="text">
+		{{note.content}}
+	</div>
+</div>

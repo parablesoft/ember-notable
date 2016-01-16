@@ -1,0 +1,96 @@
+.notable-wrapper { padding: 10px 20px }
+@media (max-width: 767px) {
+    .notable-wrapper { padding: 10px 5px }
+}
+.notable-wrapper .notable-inner {
+    padding: 0 0 5px 0;
+    margin-right: 10px;
+}
+.notable-wrapper .notable-avatar {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    float: left;
+    border-radius: 50%;
+    background-clip: padding-box;
+    margin-top: 6px;
+}
+.notable-wrapper .notable-item {
+    padding: 5px 0;
+    position: relative;
+}
+.notable-wrapper .notable-item-right .notable-body { background: #dceffc }
+.notable-wrapper .notable-item-right .notable-body:before {
+    border-color: transparent transparent transparent #dceffc;
+    left: auto;
+    right: -12px;
+}
+.notable-wrapper .notable-item-right .notable-avatar { float: right }
+.notable-wrapper .notable-item-right .notable-body {
+    margin-left: 0;
+    margin-right: 60px;
+}
+.notable-wrapper .notable-body {
+    background: #f5f5f5;
+    font-size: 0.875em;
+    width: auto;
+    margin-left: 60px;
+    padding: 8px 10px;
+    position: relative;
+    border-radius: 3px;
+    background-clip: padding-box;
+}
+.notable-wrapper .notable-form{
+  padding-top:10px;
+}
+.notable-wrapper .notable-form textarea{
+
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+
+.notable-wrapper .notable-body:before {
+    border-color: transparent #f5f5f5 transparent transparent;
+    border-style: solid;
+    border-width: 6px;
+    content: "";
+    cursor: pointer;
+    left: -12px;
+    position: absolute;
+    top: 25px;
+}
+.notable-wrapper .notable-body>.name {
+    font-weight: 600;
+    font-size: 1.125em;
+}
+.notable-wrapper .notable-body>.time {
+    position: absolute;
+    font-size: 0.875em;
+    right: 10px;
+    top: 0;
+    margin-top: 10px;
+    color: #605f5f;
+    font-weight: 300;
+}
+
+.notable-wrapper .notable-body>.text { padding-top: 6px }
+
+.initials-standard,.initials-alternate{
+	width:50px;
+	height:50px;
+	border-radius:50px;
+	font-size:20px;
+	color:#fff;
+	line-height:50px;
+	text-align:center;
+}
+
+.initials-standard{
+	background:#91b9ba;
+}
+.initials-alternate{
+	background:#9ba5bf;
+}

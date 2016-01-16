@@ -1,0 +1,20 @@
+<form {{action "createNote" on="submit"}}>
+	<div class="notable-form-entry">
+    {{#if notable}}
+  		<label style="">Add a note about {{notable}}:</label>
+    {{/if}}
+		<div class="clearfix">
+			<div style="float:left;padding-right:10px;">
+				{{initials-avatar fullName=posterFullName}}
+			</div>
+			<div style="float:left;">
+			{{focus-textarea
+				autoFocus=autoFocus
+				value=newNote.content rows="4" placeholder="Enter your note here...."}}
+				<div class="notable-form-actions">
+					<button type="submit">Add this note</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>

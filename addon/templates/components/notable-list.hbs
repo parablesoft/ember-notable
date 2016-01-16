@@ -1,0 +1,17 @@
+<div class="notable-content">
+		<div class="notable-inner" style="overflow: hidden; width: auto;">
+      {{#if isFormOnTop}}
+        {{notable-form newNote=newNote
+						posterFullName=posterFullName
+					 createNote=this.attrs.createNote}}
+      {{/if}}
+      {{#each notes as |note index|}}
+        {{notable-item note=note index=index}}
+      {{/each}}
+      {{#if isFormOnBottom}}
+        {{notable-form newNote=newNote
+					posterFullName=posterFullName
+					createNote=this.attrs.createNote}}
+      {{/if}}
+		</div>
+</div>
