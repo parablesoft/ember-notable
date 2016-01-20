@@ -6,7 +6,9 @@
 					 createNote=this.attrs.createNote}}
       {{/if}}
       {{#each notes as |note index|}}
-        {{notable-item note=note index=index}}
+        {{notable-item 
+					isUsingOppositeLayout=isUsingOpposingLayout
+					note=note index=index}}
       {{/each}}
       {{#if isFormOnBottom}}
         {{notable-form newNote=newNote

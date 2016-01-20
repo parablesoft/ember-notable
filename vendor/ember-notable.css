@@ -25,6 +25,12 @@
     left: auto;
     right: -12px;
 }
+
+.notable-wrapper .notable-item-left-alternate .notable-body { background: #e2e2e2 }
+.notable-wrapper .notable-item-left-alternate .notable-body:before {
+    border-color: transparent #e2e2e3 transparent transparent;
+}
+
 .notable-wrapper .notable-item-right .notable-avatar { float: right }
 .notable-wrapper .notable-item-right .notable-body {
     margin-left: 0;
@@ -89,8 +95,18 @@
 }
 
 .initials-standard{
-	background:#91b9ba;
+	background:#ccc;
 }
 .initials-alternate{
-	background:#9ba5bf;
+	background:#a2a2a2;
+}
+.notable-form-actions{
+	margin-top:12px;
+}
+.notable-form-initials{
+	margin-right:12px;
+	width: 50px;
+}
+.notable-form-entry-container{
+	width: calc(100% - 62px);
 }

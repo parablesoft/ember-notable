@@ -6,6 +6,7 @@ const {get,set} = Ember;
 
 export default Ember.Component.extend({
   layout: layout,
+	isUsingNotifications: false,
   classNames: ["notable-form"],
   autoFocus: true,
   actions: {

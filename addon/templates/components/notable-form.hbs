@@ -3,11 +3,11 @@
     {{#if notable}}
   		<label style="">Add a note about {{notable}}:</label>
     {{/if}}
-		<div class="clearfix">
-			<div style="float:left;padding-right:10px;">
+		<div class="clearfix notable-form-row">
+			<div class="pull-left notable-form-initials">
 				{{initials-avatar fullName=posterFullName}}
 			</div>
-			<div style="float:left;">
+			<div class="pull-left notable-form-entry-container">
 			{{focus-textarea
 				autoFocus=autoFocus
 				class="form-control"
