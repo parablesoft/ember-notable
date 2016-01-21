@@ -1,1 +1,0 @@
-export { default } from 'ember-notable/components/notable-notification';
