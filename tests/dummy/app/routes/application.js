@@ -27,6 +27,8 @@ export default Route.extend({
 			fullName: "Chris Rosende",
 		});
     return RSVP.hash({
+			newNote: this.store.createRecord("note"),
+			person: this.store.createRecord("person"),
 			notes: items,
 			users: users,
 		});
