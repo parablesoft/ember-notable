@@ -110,3 +110,20 @@
 .notable-form-entry-container{
 	width: calc(100% - 62px);
 }
+
+.notable-form-actions .notable-notifications{
+	margin-bottom:20px;
+}
+.notable-form-actions .notable-notifications strong{
+	font-size:12px;
+}
+
+.notable-form-actions .notable-notifications strong a{
+	color:#ff6900;
+}
+.notable-user-to-notify{
+	font-size:12px;
+	font-weight:normal;
+	display: inline-block;
+	margin-right: 8px;
+}

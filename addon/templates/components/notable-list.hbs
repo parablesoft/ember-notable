@@ -2,6 +2,8 @@
 		<div class="notable-inner" style="overflow: hidden; width: auto;">
       {{#if isFormOnTop}}
         {{notable-form newNote=newNote
+						isUsingNotifications=isUsingNotifications
+						users=users
 						posterFullName=posterFullName
 					 createNote=this.attrs.createNote}}
       {{/if}}
@@ -12,6 +14,8 @@
       {{/each}}
       {{#if isFormOnBottom}}
         {{notable-form newNote=newNote
+						isUsingNotifications=isUsingNotifications
+						users=users
 					posterFullName=posterFullName
 					createNote=this.attrs.createNote}}
       {{/if}}

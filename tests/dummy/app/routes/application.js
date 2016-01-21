@@ -1,7 +1,7 @@
 import Ember from 'ember';
 import moment from 'moment';
 
-const {Route,A} = Ember;
+const {Route,A,RSVP} = Ember;
 
 
 export default Route.extend({
@@ -18,6 +18,17 @@ export default Route.extend({
       posterFullName: "Jane Doe",
       createdAt: moment().subtract(1,"hours"),
     });
-    return items;
+
+		let users = A();
+		users.pushObject({
+			fullName: "Adam Ryan",
+		});
+		users.pushObject({
+			fullName: "Chris Rosende",
+		});
+    return RSVP.hash({
+			notes: items,
+			users: users,
+		});
   }
 });

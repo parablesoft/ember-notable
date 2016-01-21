@@ -11,8 +11,32 @@
 			{{focus-textarea
 				autoFocus=autoFocus
 				class="form-control"
-				value=newNote.content rows="4" placeholder="Enter your note here...."}}
+				value=newNote.content rows="4" 
+				placeholder="Enter your note here...."}}
+
 				<div class="notable-form-actions">
+					{{#if isUsingNotifications}}
+						<div class="notable-notifications">
+							{{#unless isEmailingToOthers}}
+							<strong><a  
+								 {{action "toggleIsEmailingToOthers"}}
+									href="#">Email this note to others</a></strong>
+							{{else}}
+							<p>
+							<strong>Select the people you would like to notify</strong>
+							</p>
+							<p>
+							<small><a {{action "selectAll"}} href="#">Select all</a></small> |
+							<small><a {{action "selectNone"}} href="#">Select none</a></small>
+							</p>
+							{{#each userNotifications as |notificationOption|}}
+								<label class="notable-user-to-notify">
+									{{input type="checkbox" checked=notificationOption.isNotifying}} {{notificationOption.user.fullName}}
+								</label>
+							{{/each}}
+							{{/unless}}
+						</div>
+					{{/if}}
 					<button class="btn btn-default btn-xs" type="submit">Add this note</button>
 				</div>
 			</div>
