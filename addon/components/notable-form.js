@@ -2,8 +2,8 @@ import Ember from 'ember';
 import layout from '../templates/components/notable-form';
 
 
-const {get,set,isEmpty,computed,A} = Ember;
-const {oneWay,filterBy} = computed;
+const {get,isEmpty,computed,A} = Ember;
+const {filterBy} = computed;
 
 export default Ember.Component.extend({
 	layout: layout,
@@ -34,6 +34,7 @@ export default Ember.Component.extend({
 			if(isEmpty(get(this,"newNote.content"))){return;}
 			if(this.attrs.createNote(get(this,"notifications"))){
 				this.selectUsers(false);
+
 			}
 		}
 	},

@@ -8,7 +8,7 @@ export default Ember.Component.extend({
   layout: layout,
   classNameBindings: ["initialsClass"],
   initialsClass: computed("index",function(){
-    let standard = get(this,"index") % 2 == 0;
+    let standard = get(this,"index") % 2 === 0;
     return standard ? "initials-standard" : "initials-alternate";
   }),
   company: null,
@@ -27,7 +27,7 @@ export default Ember.Component.extend({
       let words = fullName.split(" ");
       let firstWord = words[0];
       let secondWord = words[words.length -1];
-      if(words.length == 1){
+      if(words.length === 1){
         secondWord=null;
       }
       return this.transformWords(firstWord,secondWord);
