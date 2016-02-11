@@ -11,6 +11,7 @@ const DEFAULT_OPPOSING_LAYOUT = false;
 
 export default Ember.Component.extend({
   layout: layout,
+	autoFocus: false,
   classNames: ["notable-wrapper"],
   formLocation: FORM_LOCATION_DEFAULT,
   isFormOnTop: equal("formLocation",FORM_LOCATION_TOP),
