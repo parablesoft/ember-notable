@@ -12,6 +12,9 @@ export default Ember.Component.extend({
 	autoFocus: true,
 	isEmailingToOthers: false,
 	userNotifications: computed("users[],",function(){
+		let isUsingNotifications = get(this,"isUsingNotifications");
+		if(!isUsingNotifications)return;
+
 		let users = get(this,"users");
 		let result = A();
 		users.forEach(function(item){
@@ -34,11 +37,12 @@ export default Ember.Component.extend({
 			if(isEmpty(get(this,"newNote.content"))){return;}
 			if(this.attrs.createNote(get(this,"notifications"))){
 				this.selectUsers(false);
-
 			}
 		}
 	},
 	selectUsers(all){
+		let isUsingNotifications = get(this,"isUsingNotifications");
+		if(!isUsingNotifications)return;
 		get(this,"userNotifications").setEach("isNotifying",all);
 	}
 });
