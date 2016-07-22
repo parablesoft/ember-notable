@@ -1,6 +1,6 @@
 {
   "name": "ember-notable",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "An ember addon for viewing and entering notes.",
   "directories": {
     "doc": "doc",

@@ -9,6 +9,8 @@
       {{/if}}
       {{#each notes as |note index|}}
         {{notable-item 
+					allowDelete=allowDelete
+					deleteNote=this.attrs.deleteNote
 					isUsingOppositeLayout=isUsingOpposingLayout
 					note=note index=index}}
       {{/each}}

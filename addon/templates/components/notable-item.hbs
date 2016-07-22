@@ -15,3 +15,8 @@
 		{{note.content}}
 	</div>
 </div>
+{{#if allowDelete}}
+<div class="notable-footer">
+	<a {{action this.attrs.deleteNote note}} href="#">delete note</a>
+</div>
+{{/if}}

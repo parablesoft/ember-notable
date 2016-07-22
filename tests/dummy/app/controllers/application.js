@@ -9,6 +9,9 @@ export default Controller.extend({
 	users: oneWay("model.users"),
   newNote: {},
   actions:{
+		deleteNote(note){
+			get(this,"notes").removeObject(note);
+		},
     createNote(notifications){
       let newNote = get(this,"newNote");
       newNote.createdAt = moment();
